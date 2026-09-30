@@ -1,0 +1,206 @@
+/* Core layouts and fonts */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Tab Navigation Styling */
+.nav-container {
+  background-color: #111111;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+.tab-btn:hover, .tab-btn.active {
+  color: #3b82f6;
+}
+
+/* Hero Section with perfect text-centering */
+.hero-container {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(8px);
+  transform: scale(1.1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 1rem;
+}
+
+.hero-subtitle {
+  color: #fb923c;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Dashboard Cards Grid */
+.dashboard-grid {
+  max-width: 80rem;
+  margin: -5rem auto 0 auto;
+  position: relative;
+  z-index: 20;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-cols: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 30px -5px rgba(59, 130, 246, 0.15);
+}
+
+.card-label {
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.card-value {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Detail Windows */
+.details-section {
+  max-width: 80rem;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.details-box {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #3b82f6;
+}
+
+/* Contact Footer Card */
+.contact-footer {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-cols: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Sidebar Responsive Styles */
+.sidebar-link-hover:hover {
+  background-color: #334155;
+  color: #ffffff !important;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .main-content-layout {
+    margin-left: 0 !important;
+  }
+  
+  .hamburger-btn {
+    display: block !important;
+  }
+  
+  .mobile-close-btn {
+    display: block !important;
+  }
+}
